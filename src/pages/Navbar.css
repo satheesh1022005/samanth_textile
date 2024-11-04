@@ -1,0 +1,119 @@
+/* Basic Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  padding-left: 15px;
+  font-weight: bold;
+}
+.navbar-logo img {
+  width: 6rem;
+  height: 6rem;
+}
+.navbar-items {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-right: 15px;
+}
+.dropdown-icon {
+  /* Adds space between text and icon */
+  font-size: 1em; /* Adjusts the size of the icon */
+}
+/* Navbar Item Styling */
+.navbar-item {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s;
+}
+
+.navbar-item:hover {
+  color: #aaa;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Change cursor to pointer */
+  font: inherit; /* Inherit font styles */
+}
+/* Optional: Add hover styles */
+
+/* Optional: Add focus styles for accessibility */
+.dropdown-btn:focus {
+  outline: none; /* Remove outline */
+  border-bottom: 2px solid currentColor; /* Add a bottom border for focus */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 100px;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e5e5e5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-items {
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+  }
+
+  .navbar-items-mobile {
+    display: flex;
+  }
+
+  .hamburger {
+    padding-right: 20px;
+    display: block;
+  }
+}

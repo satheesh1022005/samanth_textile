@@ -1,0 +1,129 @@
+.carousel {
+  width: 100%;
+  height: 84vh; /* Take the full viewport height */
+  position: relative; /* Allow absolute positioning for inner elements */
+  overflow: hidden; /* Prevent overflow */
+  z-index: -999;
+}
+.carousel-item {
+  position: relative;
+  height: 100%; /* Make item take full height */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%; /* Make image fill height */
+  object-fit: cover; /* Maintain aspect ratio and cover entire area */
+}
+
+.carousel-content {
+  position: absolute;
+  top: 20%; /* Adjust position as needed */
+  left: 20px; /* Adjust position as needed */
+  color: white; /* Text color */
+  background-color: transparent; /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px; /* Optional rounded corners */
+}
+.carousel-content h1 {
+  font-size: 3rem; /* Set a very large font size */
+  font-weight: bold; /* Make the text bold */
+  margin: 0 0 10px; /* Bottom margin for spacing */
+  color: white; /* Text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds depth with a shadow */ /* Gradient background */
+  background-size: 100%; /* Ensures the gradient covers the text */
+  padding: 5px; /* Padding around the text */
+  border-radius: 5px; /* Slight rounding of corners */
+}
+.carousel-content p {
+  font-size: 1rem; /* Set a very large font size */
+  font-weight: bold; /* Make the text bold */
+  margin: 0 0 10px; /* Bottom margin for spacing */
+  color: white; /* Text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds depth with a shadow */ /* Gradient background */
+  background-size: 100%; /* Ensures the gradient covers the text */
+  padding: 5px; /* Padding around the text */
+  border-radius: 5px; /* Slight rounding of corners */
+}
+.explore-btn {
+  background-color: black; /* Black background for the button */
+  color: white; /* White text color */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-size: 100%;
+  border: 2px solid #f4793c; /* Orange border color */
+  padding: 5px 20px; /* Padding for the button */
+  font-size: 1rem; /* Font size for the button text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+}
+
+.explore-btn:hover {
+  background-color: #ffffff; /* Change background color on hover */
+  color: black; /* Change text color on hover */
+}
+
+.right-arrow {
+  margin-left: 5px; /* Space between text and arrow */
+}
+
+@media (max-width: 1200px) {
+  .carousel-content {
+    top: 10%; /* Adjust position for smaller screens */
+    left: 10px; /* Adjust position for smaller screens */
+  }
+
+  .carousel-content h1 {
+    font-size: 2.5rem; /* Decrease font size */
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem; /* Decrease font size */
+  }
+
+  .explore-btn {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Decrease font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-content {
+    top: 5%; /* Adjust position further for mobile */
+    left: 5px; /* Adjust position further for mobile */
+  }
+
+  .carousel-content h1 {
+    font-size: 2rem; /* Further decrease font size */
+  }
+
+  .carousel-content p {
+    font-size: 0.85rem; /* Further decrease font size */
+  }
+
+  .explore-btn {
+    padding: 6px 12px; /* Adjust padding for smaller screens */
+    font-size: 0.85rem; /* Decrease font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-content {
+    top: 3%; /* Further adjust position for very small screens */
+    left: 5px; /* Further adjust position for very small screens */
+  }
+
+  .carousel-content h1 {
+    font-size: 1.5rem; /* Make font size smaller for mobile */
+  }
+
+  .carousel-content p {
+    font-size: 0.75rem; /* Make font size smaller for mobile */
+  }
+
+  .explore-btn {
+    padding: 5px 10px; /* Adjust padding for very small screens */
+    font-size: 0.75rem; /* Make font size smaller for mobile */
+  }
+}
