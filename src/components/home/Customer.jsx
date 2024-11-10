@@ -36,8 +36,8 @@ const Customer = () => {
     }, []);
 
     return (
-        <div className='customer-main d-flex py-5 flex-column align-items-center'>
-            <h2 className='py-5 p-2'>
+        <div className='customer-main  d-flex py-5 flex-column align-items-center'>
+            <h2 className='py-5 p-2 text-center'>
             We associate with the world's leading retail outlets
             </h2>
             <div className="customer-container">
