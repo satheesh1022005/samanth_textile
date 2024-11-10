@@ -1,5 +1,5 @@
 import Contact from "../components/Contact";
-import SocialMedia from "../components/SocialMedia";
+import Footer1 from "../components/Footer1";
 import "./Footer.css"
 const Footer = () => {
     return (
@@ -14,7 +14,7 @@ const Footer = () => {
                 </section>
             </section>
             <section>
-                <SocialMedia/>
+                <Footer1/>   
             </section>
             <section className="footer-end">All copyrights are reserved &copy; 2024 </section>
         </>

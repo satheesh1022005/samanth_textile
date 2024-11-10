@@ -3,34 +3,32 @@ import ig from "../assets/instagram.png";
 import tg from "../assets/telegram.png";
 import yt from "../assets/youtube.png";
 import tr from "../assets/twitter.png";
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; // Import specific icons
 
-export const socialMedia=[
+
+// socialMedia.js
+export const socialMedia = [
     {
-        name:'Instagram',
-        logo:ig,
-        url:'',
+        name: 'Instagram',
+        logo: faInstagram, // Assuming FontAwesome icons
+        url: 'https://instagram.com',
     },
     {
-        name:'Instagram',
-        logo:fb,
-        url:'',
+        name: 'Facebook',
+        logo: faFacebookF,
+        url: 'https://facebook.com',
     },
     {
-        name:'Instagram',
-        logo:yt,
-        url:'',
+        name: 'Twitter',
+        logo: faTwitter,
+        url: 'https://twitter.com',
     },
     {
-        name:'Instagram',
-        logo:tr,
-        url:'',
+        name: 'Telegram',
+        logo: faLinkedinIn, // Adjust if using Telegram icon
+        url: 'https://telegram.org',
     },
-    {
-        name:'Instagram',
-        logo:tg,
-        url:'',
-    },
-]
+];
 
 
 
