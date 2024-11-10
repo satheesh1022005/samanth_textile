@@ -81,6 +81,9 @@
   .carousel-content p {
     font-size: 0.9rem; /* Decrease font size */
   }
+  .carousel{
+    height: 100%;
+  }
 
   .explore-btn {
     padding: 8px 16px; /* Adjust padding for smaller screens */
