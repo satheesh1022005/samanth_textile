@@ -16,7 +16,7 @@ const Footer = () => {
             <section>
                 <Footer1/>   
             </section>
-            <section className="footer-end">All copyrights are reserved &copy; 2024 </section>
+            <section className="footer-end">All copyrights are reserved &copy; 2025 </section>
         </>
     )
 }
