@@ -1,0 +1,93 @@
+/* Footer1.css */
+
+/* Main Footer Container */
+.custom-footer {
+    background-color: #1a1a1a;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 3px solid #343a40;
+    transition: background-color 0.3s ease;
+}
+.custom-footer:hover {
+    background-color: #2e2e2e;
+}
+
+/* Heading Styling */
+.custom-footer-heading {
+    color: orange;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.custom-footer-heading:hover {
+    color: #ffffff;
+}
+
+/* Social Media Links */
+.custom-footer-social-link {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.custom-footer-social-link:hover {
+    color: orange;
+    transform: translateY(-3px);
+}
+
+/* Icon Styling */
+.custom-footer-icon {
+    font-size: 1.5rem;
+}
+
+/* Paragraph Styling */
+.custom-footer-text {
+    color: #d3d3d3;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    margin: 0;
+    padding-block: 5px;
+}
+.custom-footer-text:hover {
+    color: #ffffff;
+}
+/* Quick Links Styling */
+.custom-footer-links {
+    display: flex;
+    padding: 1em;
+    list-style-type: none;
+    padding-left: 0;
+}
+.custom-footer-link {
+    color: white;
+    padding-right: 0.75em;
+    font-size: 0.9rem;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.custom-footer-link:hover {
+    color: orange;
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+/* Copyright Styling */
+.custom-footer-copyright {
+    font-size: 0.85rem;
+    color: #a9a9a9;
+    border-top: 1px solid #343a40;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    transition: color 0.3s ease;
+}
+.custom-footer-copyright:hover {
+    color: #ffffff;
+}
+
+
+@media (min-width: 768px) {
+    .custom-footer-links{
+        padding: 0%;
+    }
+}
