@@ -1,0 +1,72 @@
+.about{
+    padding: 2em;
+    overflow: hidden;
+}
+.about-head h1{
+    padding-block: 0.5em;
+    color: orangered;
+    font-weight: 700;
+}
+.about-head p{
+    padding-block: 1em;
+    font-weight: bold;
+    font-size: 1rem; /* Set a very large font size */
+    font-weight: bold; /* Make the text bold */
+    margin: 0 0 10px; /* Bottom margin for spacing */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds depth with a shadow */ /* Gradient background */
+    background-size: 100%; /* Ensures the gradient covers the text */
+    padding: 5px; /* Padding around the text */
+    border-radius: 5px; /* Slight rounding of corners */
+}
+.about-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 1em;
+    padding-block: 2em;
+}
+
+
+
+
+
+
+.about-cards{
+    background-color:whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 0.5em;
+    border-left: 0.5em solid orange;
+    border-right: 0.5em solid orange;
+    width: 12em;
+    height: 10em;
+    border-radius: 100%;
+    color: orangered;
+    cursor: pointer;
+    font-size:large;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.5s;
+}
+.about-cards img{
+    width: 3em;
+}
+.about-cards:hover{
+    background-color:rgba(245, 245, 245, 0.6);
+    backdrop-filter: blur(5px);
+    border-top: 0.5em solid orange;
+    border-bottom: 0.5em solid orange;
+    border-width: 0.3em;
+}
+.about-back{
+    height: 10px;
+}
+.about-back img{
+    position: relative;
+    right: -30em;
+    z-index: -1;
+}
