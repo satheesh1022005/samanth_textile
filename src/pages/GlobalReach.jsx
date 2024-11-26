@@ -13,7 +13,7 @@ const GlobalReach = () => {
       // Set up the IntersectionObserver
       const observer = new IntersectionObserver(
         (entries, observer) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
               console.log(`Element is in view: ${selector}`); // Debugging
               entry.target.classList.add(animationClass);
@@ -24,7 +24,7 @@ const GlobalReach = () => {
         { threshold: 1 } // Trigger when 50% of the element is in view
       );
 
-      elements.forEach(element => observer.observe(element));
+      elements.forEach((element) => observer.observe(element));
 
       // Cleanup observer when component unmounts
       return () => observer.disconnect();
@@ -56,22 +56,27 @@ const GlobalReach = () => {
 
           <div className="map-and-description">
             <p className="description">
-              With exports to other countries, we have established ourselves as a
-              trusted provider on the international stage. Our commitment and
+              With exports to other countries, we have established ourselves as
+              a trusted provider on the international stage. Our commitment and
               dedication to quality bring us into the worldwide textile markets.
             </p>
           </div>
         </div>
       </div>
-
-      <div className="global-footer">
-        <div className="footer-banner">
-          <img src={phone} alt="Phone Icon" className="phone-icon" />
-          <p className="footer-text">
-            For Pricing & Custom Orders, +91 9842222335
-          </p>
+      <a
+        href="tel:+919842222335"
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <div className="global-footer">
+          <div className="footer-banner">
+            <p className="footer-text">
+              For Pricing & Custom Orders{" "}
+              <img src={phone} alt="Phone Icon" className="phone-icon" />
+              +91 9842222335
+            </p>
+          </div>
         </div>
-      </div>
+      </a>
     </section>
   );
 };

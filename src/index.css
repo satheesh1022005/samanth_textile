@@ -3,6 +3,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+  background: linear-gradient(135deg, #fbfbfb, #ffffff);
+}
 /* index.css */
 :root {
   --primary-color: #a93ab5;
