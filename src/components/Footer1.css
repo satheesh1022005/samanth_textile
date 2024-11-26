@@ -5,8 +5,8 @@
     background-color: #1a1a1a;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    border-top: 3px solid #343a40;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 .custom-footer:hover {
     background-color: #2e2e2e;
@@ -15,7 +15,7 @@
 /* Heading Styling */
 .custom-footer-heading {
     color: orange;
-    font-size: 1.25rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     position: relative;
     transition: color 0.3s ease;
@@ -44,7 +44,7 @@
 /* Paragraph Styling */
 .custom-footer-text {
     color: #d3d3d3;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
     margin: 0;
     padding-block: 5px;
@@ -60,9 +60,10 @@
     padding-left: 0;
 }
 .custom-footer-link {
-    color: white;
-    padding-right: 0.75em;
-    font-size: 0.9rem;
+    color: #d3d3d3;
+
+    padding-block: 0.25em;
+    font-size: 1rem;
     display: block;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -90,4 +91,13 @@
     .custom-footer-links{
         padding: 0%;
     }
+    .custom-footer-about{
+        border: none;
+    }
+}
+
+
+.custom-footer-about{ 
+    border-right: 1px solid rgb(92, 92, 92);
+
 }

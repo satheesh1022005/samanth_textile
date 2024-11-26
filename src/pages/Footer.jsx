@@ -1,6 +1,8 @@
 import Contact from "../components/Contact";
 import Footer1 from "../components/Footer1";
-import "./Footer.css";
+import "./Footer.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { socialMedia } from "../components/Data"; // Adjust the path as needed
 const Footer = () => {
   return (
     <>
@@ -13,14 +15,27 @@ const Footer = () => {
           loading="lazy"
         ></iframe>
       </section>
-      <section>
+      <section className="bg-dark p-5 pb-0">
         <Footer1 />
       </section>
-      <section className="footer-end">
-        All copyrights are reserved &copy; 2025{" "}
-      </section>
+      <div className="bg-dark d-flex justify-content-center p-3 pt-5">
+        <div className="d-flex">
+          {socialMedia.map((media, index) => (
+            <a
+              key={index}
+              href={media.url}
+              className="custom-footer-social-link text-decoration-none d-flex align-items-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={media.logo} className="custom-footer-icon me-2" />
+            </a>
+          ))}
+        </div>
+      </div>
+      <section className="footer-end bg-dark p-3">All copyrights are reserved &copy; 2024 </section>
     </>
-  );
-};
+  )
+}
 
 export default Footer;
