@@ -4,7 +4,8 @@
   color: #333;
   background-color: #f9f9f9;
   overflow: hidden;
-  height: 95vh;
+  height: auto; /* Let the height grow based on content */
+  padding-bottom: 2em; /* Space at the bottom */
 }
 
 /* Flexbox Layout for Content and Carousel */
@@ -12,10 +13,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url("../assets/image.png") no-repeat right center;
-  background-size: contain;
-  padding: 2em 0;
-  gap: 1em;
+  background: url("../assets/image.png") no-repeat top right; /* Ensures the image is always in the top right corner */
+  background-size: contain; /* Resize background image to fit */
+  background-position: top right; /* Keeps image in the top-right corner */
+  padding: 2em;
+  gap: 2em;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
 }
 
 /* Text Content Styling */
@@ -28,7 +31,7 @@
 .about-content h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: var(--text-color); /* Elegant orange tone */
+  color: var(--text-color);
   margin-bottom: 1em;
 }
 
@@ -37,15 +40,16 @@
   line-height: 1.6;
   color: #555;
   background: rgba(255, 255, 255, 0.8);
-
   border-radius: 10px;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 /* Carousel Styling */
 .about-carousel {
   flex: 1;
+  max-width: 35%; /* Adjust the carousel width */
   margin-right: 2em;
-  max-width: 30%;
 }
 
 .card {
@@ -72,6 +76,7 @@
 .header {
   display: flex;
 }
+
 /* Rounded Cards Section */
 .about-items {
   display: flex;
@@ -111,4 +116,102 @@
 .about-card:hover {
   transform: scale(1.1);
   background-color: rgba(255, 245, 230, 0.9);
+}
+
+/* Media Queries */
+
+/* For Tablets and Smaller Screens (less than 1024px) */
+@media (max-width: 1024px) {
+  .about-row {
+    background-size: 50%; /* Reduce background size on smaller screens */
+    padding: 2em; /* Adjust padding to fit better */
+    gap: 2em; /* Adjust gap between sections */
+  }
+
+  .about-carousel {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .about-content {
+    padding: 2em;
+    flex: 1 0 100%;
+  }
+
+  .about-items {
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .about-card {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .about-card span {
+    font-size: 0.9rem;
+  }
+}
+
+/* For Smaller Screens (less than 768px) */
+@media (max-width: 768px) {
+  .about-row {
+    background-size: 40%; /* Reduce background size on smaller screens */
+    padding: 1.5em; /* Adjust padding to fit better */
+    gap: 1.5em; /* Adjust gap between sections */
+  }
+
+  /* Move carousel below content */
+  .about-carousel {
+    width: 100%;
+    margin: 0;
+  }
+
+  .about-content {
+    text-align: center;
+    padding: 2em;
+    flex: 1 0 100%;
+  }
+
+  /* Adjust round cards to fit in 2 rows */
+  .about-items {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .about-card {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1.5em;
+  }
+
+  .about-card span {
+    font-size: 0.8rem;
+  }
+}
+
+/* For Mobile Devices (less than 480px) */
+@media (max-width: 480px) {
+  .about-card {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .about-card span {
+    font-size: 0.7rem;
+  }
+
+  .about-items {
+    gap: 1em;
+  }
+
+  .about-row {
+    padding: 1em;
+  }
+
+  /* Adjust text content padding on mobile */
+  .about-content {
+    padding: 1.5em;
+  }
 }
