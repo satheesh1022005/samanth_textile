@@ -5,6 +5,9 @@ import Footer from "./pages/Footer";
 import About from "./pages/About";
 import Do from "./pages/Do";
 import Customer from "./components/home/Customer";
+
+import Machine from "./pages/Machine";
+import GlobalReach from "./pages/GlobalReach";
 function App() {
   return (
     <>
@@ -13,6 +16,8 @@ function App() {
       <About />
       <Do />
       <Customer />
+      <GlobalReach />
+      <Machine />
       <Footer />
     </>
   );
