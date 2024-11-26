@@ -6,7 +6,8 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   return (
-    <nav className="navbar">
+    <div className="navbar-main">
+      <nav className="navbar">
       <div className="navbar-logo">
         <img src={logo} alt="Logo" />
       </div>
@@ -31,6 +32,7 @@ const Navbar = () => {
         {isMobile ? "X" : <>&#9776;</>}
       </div>
     </nav>
+    </div>
   );
 };
 
