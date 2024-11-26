@@ -1,68 +1,102 @@
-.contact-head,.footer-map section ,.social-title{
-    font-size: 1.5em;
-    font-weight: 900;
-    color: orange;
-    padding-block: 1em;
-    text-align: center;
-}
-.contact-form{
-    box-sizing: border-box;
-    display: flex;
-    padding: 1em;
-    width: min(30em,90%);
-    gap: 1em;
-    flex-direction: column;
-}
-.contact{
-    display: flex;
-    gap: 1em;
-}
-.contact-form textarea{
-    padding: 0.5em;
-    height: 8em;
-    border: 1px solid orange;
-    outline: none;
-}
-.contact-form>section>*{
-    padding:0.5em;
-    width: 100%;
-    outline: none;
-    border: 1px solid orange;
-}
-.contact-form button{
-    outline: none;
-    background-color: orange;
-    border: none;
-    font-weight: 500;
-    padding: 0.5em;
-}
-.contact-form button:hover{
-    background-color: rgb(217, 142, 2);
+/* General Layout */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2em;
+  box-sizing: border-box;
 }
 
-
-
-.social-media{
-    justify-content: center;
-    gap: 2em;
-    display: flex;
-    background-color: whitesmoke;
-    padding-bottom: 2em;
+.contact-form {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.social-items{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-}
-.social-logo{
-    width: 2em;
+/* Form Title */
+.contact-title {
+  font-size: 2.5em; /* Larger font size */
+  font-weight: bolder; /* Make the text bold */
+  color: #333; /* Dark gray color for better contrast */
+  margin-bottom: 1.5em; /* Space below the title */
+  letter-spacing: 1px; /* Add some space between letters for a modern feel */
+  line-height: 1.3; /* Adjust line height for better readability */
 }
 
+/* Grid for Inputs */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
 
-@media (max-width:787px){
-    .social-media{
-        flex-direction: column;
-    }
+.contact-input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.contact-input:focus {
+  border-color: #ff6600;
+}
+
+/* Textarea */
+.contact-textarea {
+  width: 100%;
+  padding: 1em;
+  height: 8em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.contact-textarea:focus {
+  border-color: #ff6600;
+}
+
+/* Button */
+.contact-button {
+  display: inline-block; /* Ensures the button is treated as a block with centered text */
+  text-align: center;
+  width: 8rem;
+  padding: 0.6em;
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: white;
+  background: #ff6600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+  background: #e65500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.5em;
+  }
+
+  .contact-title {
+    font-size: 1.8em;
+  }
 }

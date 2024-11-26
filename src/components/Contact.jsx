@@ -1,43 +1,100 @@
 import { useState } from "react";
 import "./Contact.css";
 
-const Contact=()=>{
-    const[contact,setContact]=useState({
-        username:'',
-        email:'',
-        message:''
-    })
-    const handleSubmit=()=>{
-        console.log(contact)
-    }
-    return(
-        <>
-            <div className="contact-form">
-                <section className="contact-head">Ask Your Queries</section>
-                <section className="contact">
-                <input
-                    placeholder="Enter Your name"
-                    name="username"
-                    type="text"
-                    onChange={(e)=>setContact(prev=>({...prev,[e.target.name]:e.target.value}))}
-                />
-                <input
-                    placeholder="Enter Email Id"
-                    name="email"
-                    type="email"
-                    onChange={(e)=>setContact(prev=>({...prev,[e.target.name]:e.target.value}))}
-                />
-                </section>
-                <textarea
-                    placeholder="Write message"
-                    name="message"
-                    onChange={(e)=>setContact(prev=>({...prev,[e.target.name]:e.target.value}))}
-                ></textarea>
-                <button
-                    onClick={handleSubmit}
-                >Submit</button>
-            </div>
-        </>
-    )
-}
+const Contact = () => {
+  const [contact, setContact] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleSubmit = () => {
+    console.log(contact);
+    alert("Thank you for your message!");
+  };
+
+  return (
+    <div className="contact-container">
+      <div className="contact-form">
+        <h2 className="contact-title">
+          Have a query? Feel free to contact us!
+        </h2>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <div className="form-grid">
+            <input
+              placeholder="Enter Your Name"
+              name="name"
+              type="text"
+              value={contact.name}
+              onChange={(e) =>
+                setContact((prev) => ({
+                  ...prev,
+                  [e.target.name]: e.target.value,
+                }))
+              }
+              className="contact-input"
+            />
+            <input
+              placeholder="Enter Email ID"
+              name="email"
+              type="email"
+              value={contact.email}
+              onChange={(e) =>
+                setContact((prev) => ({
+                  ...prev,
+                  [e.target.name]: e.target.value,
+                }))
+              }
+              className="contact-input"
+            />
+            <input
+              placeholder="Enter Phone Number"
+              name="phone"
+              type="tel"
+              value={contact.phone}
+              onChange={(e) =>
+                setContact((prev) => ({
+                  ...prev,
+                  [e.target.name]: e.target.value,
+                }))
+              }
+              className="contact-input"
+            />
+            <input
+              placeholder="Enter Subject"
+              name="subject"
+              type="text"
+              value={contact.subject}
+              onChange={(e) =>
+                setContact((prev) => ({
+                  ...prev,
+                  [e.target.name]: e.target.value,
+                }))
+              }
+              className="contact-input"
+            />
+          </div>
+          <textarea
+            placeholder="Write your message here"
+            name="message"
+            value={contact.message}
+            onChange={(e) =>
+              setContact((prev) => ({
+                ...prev,
+                [e.target.name]: e.target.value,
+              }))
+            }
+            className="contact-textarea"
+          ></textarea>
+          <button onClick={handleSubmit} className="contact-button">
+            Ask now!
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
 export default Contact;
