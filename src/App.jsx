@@ -11,8 +11,8 @@ function App() {
       <Nav />
       <Carousel />
       <About />
-      <Customer />
       <Do />
+      <Customer />
       <Footer />
     </>
   );

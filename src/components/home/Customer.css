@@ -1,42 +1,50 @@
-/* Customer.css */
-
-.customer-container {
-    overflow: hidden; /* Hide overflow to create a clean scrolling effect */
-    width: 90%; /* Ensure container spans full width */
-    position: relative;
+.customer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 223, 211);
+  color: orangered;
+  padding: 20px;
 }
 
-.customer-wrapper {
-    display: flex; /* Align items in a row */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for one-step scroll */
+.customer-container {
+  width: 100%; /* Expand the slider width */
+  max-width: 1400px; /* Ensure it doesn't stretch too far */
+  margin: 0 auto;
+}
+
+.customer-container .slick-slide {
+  padding: 0 10px; /* Add padding around each slide */
 }
 
 .customer-card {
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    width: 250px;
-    background-color:rgb(0, 0, 0);
-    margin-inline: 20px;
-    text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .customer-card img {
-    width: 170px;
-    background-color: white;
-    height: 80px;
-    padding: 1em;
-    margin-bottom: 10px;
+  width: 150px; /* Ensure consistent image size */
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  object-fit: contain; /* Ensures proper scaling */
 }
 
 .customer-card h5 {
-    font-size: 1rem;
-    color: #343a40;
+  font-size: 1rem;
+  color: #333333;
 }
 
-.customer-main{
-    display: flex;
-    background-color: rgb(255, 223, 211);
-    color: orangered;
-    justify-content: center;
+.customer-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }

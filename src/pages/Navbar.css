@@ -6,6 +6,8 @@
   padding: 10px 20px;
   background-color: var(--background-color);
   color: var(--text-color);
+  height: 6rem;
+  position: absolute;
 }
 
 .navbar-logo {
@@ -14,8 +16,8 @@
   font-weight: bold;
 }
 .navbar-logo img {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
 }
 .navbar-items {
   display: flex;
