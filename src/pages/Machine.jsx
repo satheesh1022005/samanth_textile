@@ -1,39 +1,34 @@
 import React, { useRef } from "react";
 import "./Machine.css";
-import img1 from "../assets/real.jpg";
-import img2 from "../assets/real1.jpg";
-import img3 from "../assets/real2.png";
+import machine1 from "../assets/machine1.jpg";
+import machine2 from "../assets/machine2.jpg";
+import machine3 from "../assets/machine3.jpg";
+import machine4 from "../assets/machine4.jpg";
 
 const slidesData = [
   {
-    name: "Switzerland",
-    description: "X-Dev, Transforming code into visual poetry..!",
-    image: img1,
+    name: "Sulzer",
+    description:
+      "Sulzer machines are known for their efficiency in high-speed textile weaving, ensuring precision and durability.",
+    image: machine1,
   },
   {
-    name: "Finland",
-    description: "X-Dev, Transforming code into visual poetry..!",
-    image: img2,
+    name: "Airjet-710",
+    description:
+      "The Airjet-710 excels in air-jet weaving, combining speed and energy efficiency for modern textile production.",
+    image: machine2,
   },
   {
-    name: "Iceland",
-    description: "X-Dev, Transforming code into visual poetry..!",
-    image: img3,
+    name: "Airjet-810",
+    description:
+      "With advanced air-jet technology, the Airjet-810 delivers superior weaving performance for premium fabrics.",
+    image: machine3,
   },
   {
-    name: "Australia",
-    description: "X-Dev, Transforming code into visual poetry..!",
-    image: img1,
-  },
-  {
-    name: "Netherlands",
-    description: "X-Dev, Transforming code into visual poetry..!",
-    image: img2,
-  },
-  {
-    name: "Ireland",
-    description: "X-Dev, Transforming code into visual poetry..!",
-    image: img3,
+    name: "Sizing Machine",
+    description:
+      "Sizing Machines prepare yarns for weaving by coating them with protective solutions to enhance strength and durability.",
+    image: machine4,
   },
 ];
 

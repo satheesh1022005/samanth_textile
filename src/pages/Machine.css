@@ -59,12 +59,12 @@
   width: 28vw;
   height: 68vh;
   text-align: left;
-  color: black;
+  color: rgb(255, 255, 255);
   opacity: 1;
   transform: translate(0, -50%);
   font-family: system-ui;
   display: none;
-  background-color: rgba(255, 255, 255, 0.43);
+  background-color: rgba(0, 0, 0, 0.413);
   padding: 10px;
   border-radius: 12px;
   backdrop-filter: blur(1px) saturate(181%);

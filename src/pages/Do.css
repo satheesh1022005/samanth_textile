@@ -1,66 +1,85 @@
+/* General styles */
 .do-main {
   display: flex;
   justify-content: center;
   gap: 1em;
   height: 100vh;
 }
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Vertically center the content */
+  position: relative;
+}
+
+/* Sidebar container adjustments */
 .sidebar {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  position: relative;
+  height: 60%; /* Adjust the height as needed */
+  justify-content: center; /* Vertically center the buttons inside the sidebar */
   gap: 1px;
-  margin-top: 11rem;
+  padding-top: 12%;
 }
+
+/* Styling the buttons in the sidebar */
 .s-icon {
   border: none;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
+
 .s-icon:hover {
   background-color: orange;
   color: white;
 }
-.content {
-  width: 100%;
+
+.active {
+  background-color: orange;
+  color: white;
 }
+
+/* Text overlay for the main content */
 .s-text-do {
   position: absolute;
-  bottom: 2em; /* Slightly raised from the bottom */
-  right: 2em; /* Offset from the right */
-  color: white; /* Text color */
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Adds depth with a shadow */ /* Gradient background */
-  background-size: 100%; /* Ensures the gradient covers the text */
-  max-width: 600px; /* Limit text width */
-  padding: 0; /* Remove background padding */
-  line-height: 1.6; /* Enhance readability */
+  bottom: 4em;
+  right: 2em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  padding: 0;
+  line-height: 1.6;
   z-index: 1;
 }
+
 .s-text-do h2 {
-  font-size: 2.5em; /* Large header size */
-  margin-bottom: 0.5em; /* Space below the header */
-  font-weight: bolder; /* Make it stand out */
-  text-transform: uppercase; /* Optional: for styling */
-  color: rgb(255, 255, 255); /* Highlight header with orange */
-  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9); /* Strong shadow for header */
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);
 }
 
 .s-text-do p {
-  font-size: 1.2em; /* Slightly larger paragraph size */
-  margin: 0; /* No extra spacing */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Shadow for better visibility */
-  font-weight: 500; /* Lighter font for contrast with the header */
-  letter-spacing: 0.5px; /* Slight spacing for a modern look */
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
+/* Main image container */
 .s-image {
   width: 100%;
-  height: 100%; /* Ensure it fills its container */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  position: relative; /* For containing the .s-text-do */
-  filter: brightness(0.8); /* Slightly darken the image for contrast */
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: brightness(0.8);
 }
 
 .sidebar-main {
@@ -70,50 +89,112 @@
   scroll-snap-align: start;
 }
 
-/* Ensure the container behaves like a table */
+/* Sidebar buttons and layout adjustments */
 .table-container {
   display: table;
-  width: 100%; /* You can adjust this as needed */
-  border-collapse: collapse; /* Remove spaces between cells */
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Define the row in the table */
 .table-row {
   display: table-row;
 }
 
-/* Define each cell in the row */
 .table-cell {
   display: table-cell;
-  padding: 10px; /* Add some padding for spacing */
-  vertical-align: middle; /* Align content vertically */
-  text-align: center; /* Align content horizontally */
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
 }
 
-/* Additional styles for the title cell */
 .title-cell {
   font-size: 16px;
   font-weight: 600;
 }
 
-/* Styling the icon */
 .s-icons {
-  font-size: 24px; /* Adjust the icon size */
+  font-size: 24px;
 }
 
-/* Adjust the visibility of the title */
 .d-none.d-sm-block {
   display: none;
 }
 
-@media (min-width: 576px) {
-  /* Make the title visible on larger screens */
-  .d-none.d-sm-block {
-    display: block;
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .sidebar {
+    padding-top: 9%;
+  }
+  .s-text-do h2 {
+    font-size: 2em;
+  }
+
+  .s-text-do p {
+    font-size: 1em;
+  }
+
+  .s-icons {
+    font-size: 20px;
   }
 }
-@media (max-width: 787px) {
+
+@media (max-width: 768px) {
+  .do-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    justify-content: center;
+    padding-top: 10%;
+  }
+
+  .s-text-do {
+    bottom: 3em;
+    right: 1em;
+    max-width: 70%;
+  }
+
+  .s-text-do h2 {
+    font-size: 1.5em;
+  }
+
+  .s-text-do p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  .s-text-do {
+    bottom: 4em;
+    right: 0.5em;
+    max-width: 70%;
+  }
+
+  .s-text-do h2 {
+    font-size: 1.2em;
+  }
+
+  .s-text-do p {
+    font-size: 0.8em;
+  }
+
+  .sidebar {
+    gap: 0.2em;
+    padding-top: 35%;
+  }
+
   .s-icon {
-    padding: 1px;
+    font-size: 12px;
+    width: 2em;
+    height: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .s-icons {
+    font-size: 16px;
   }
 }

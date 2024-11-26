@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import product1 from "../assets/product1.jpg";
 import instagramImage from "../assets/instagram.png"; // Adjust the path as necessary
 import "./Do.css";
 import {
@@ -17,35 +18,35 @@ const Do = () => {
       id: 1,
       title: "Product 1",
       logo: faTwitter,
-      img: "https://th.bing.com/th/id/OIP.sCPZXf5O54t_5mJAXHSGtwAAAA?rs=1&pid=ImgDetMain",
+      img: product1,
       text: "Object 1 Content: This is a description that can take multiple lines to provide more information about the object.",
     },
     {
       id: 2,
       title: "Product 2",
       logo: faFacebookF,
-      img: "https://th.bing.com/th/id/OIP.aPhNiFy6xavOJcChswZORQHaEK?rs=1&pid=ImgDetMain",
+      img: product1,
       text: "Object 2 Content: This is another description that can also take multiple lines.",
     },
     {
       id: 3,
       title: "Product 3",
       logo: faInstagram,
-      img: instagramImage,
+      img: product1,
       text: "Object 3 Content: Yet another description that can take up space and provide details.",
     },
     {
       id: 4,
       title: "Product 4",
       logo: faTwitter,
-      img: "https://th.bing.com/th/id/OIP.sCPZXf5O54t_5mJAXHSGtwAAAA?rs=1&pid=ImgDetMain",
+      img: product1,
       text: "Object 1 Content: This is a description that can take multiple lines to provide more information about the object.",
     },
     {
       id: 5,
       title: "Product 5",
       logo: faFacebookF,
-      img: "https://th.bing.com/th/id/OIP.aPhNiFy6xavOJcChswZORQHaEK?rs=1&pid=ImgDetMain",
+      img: product1,
       text: "Object 2 Content: This is another description that can also take multiple lines.",
     },
     {
@@ -59,7 +60,7 @@ const Do = () => {
       id: 7,
       title: "Product 7",
       logo: faTwitter,
-      img: "https://th.bing.com/th/id/OIP.sCPZXf5O54t_5mJAXHSGtwAAAA?rs=1&pid=ImgDetMain",
+      img: product1,
       text: "Object 1 Content: This is a description that can take multiple lines to provide more information about the object.",
     },
   ];
@@ -100,12 +101,12 @@ const Do = () => {
                 </button>
               ))}
             </div>
-            <div className="text-overlay s-text-do">
-              <h2 className="s-header">
-                Header for Object {objects[activeObject].id}
-              </h2>
-              <p>{objects[activeObject].text}</p>
-            </div>
+          </div>
+          <div className="text-overlay s-text-do">
+            <h2 className="s-header">
+              Header for Object {objects[activeObject].id}
+            </h2>
+            <p>{objects[activeObject].text}</p>
           </div>
         </div>
       </div>

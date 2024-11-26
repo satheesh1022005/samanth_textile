@@ -18,13 +18,14 @@
 
 .carousel-content {
   position: absolute;
-  top: 20%; /* Adjust position as needed */
-  left: 20px; /* Adjust position as needed */
-  color: white; /* Text color */
-  background-color: transparent; /* Semi-transparent background */
+  bottom: 7em; /* Distance from the bottom */
+  left: 1em; /* Align to the left */
+  background-color: transparent; /* Debugging color */
   padding: 10px;
-  border-radius: 5px; /* Optional rounded corners */
+  border-radius: 5px;
+  width: auto; /* Adjust the width as per content */
 }
+
 .carousel-content h1 {
   font-size: 3rem; /* Set a very large font size */
   font-weight: bold; /* Make the text bold */
@@ -69,11 +70,6 @@
 }
 
 @media (max-width: 1200px) {
-  .carousel-content {
-    top: 10em;
-    left: 10px; /* Adjust position for smaller screens */
-  }
-
   .carousel-content h1 {
     font-size: 2.5rem; /* Decrease font size */
   }
@@ -94,11 +90,6 @@
 }
 
 @media (max-width: 768px) {
-  .carousel-content {
-    top: 20%; /* Adjust position further for mobile */
-    left: 5px; /* Adjust position further for mobile */
-  }
-
   .carousel-content h1 {
     font-size: 2rem; /* Further decrease font size */
   }
@@ -115,10 +106,8 @@
 
 @media (max-width: 480px) {
   .carousel-content {
-    top: 3%; /* Further adjust position for very small screens */
-    left: 5px; /* Further adjust position for very small screens */
+    bottom: 3em;
   }
-
   .carousel-content h1 {
     font-size: 1.5rem; /* Make font size smaller for mobile */
   }

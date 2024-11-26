@@ -4,7 +4,23 @@ import { aboutData } from "../components/Data";
 import "./About.css";
 import time from "../assets/time.png";
 import background from "../assets/image.png";
-
+const milestonesData = [
+  {
+    year: "2012",
+    description:
+      "Our journey begins with a small, dedicated team aiming for excellence.",
+  },
+  {
+    year: "2015",
+    description:
+      "Expanding our horizons, we introduced modern textile innovations to the market.",
+  },
+  {
+    year: "2020",
+    description:
+      "Reaching global audiences and becoming a trusted name in textiles.",
+  },
+];
 const About = () => {
   const carouselSettings = {
     dots: true,
@@ -33,37 +49,20 @@ const About = () => {
 
         <section className="about-carousel">
           <Slider {...carouselSettings}>
-            <div className="card">
-              <section className="header">
-                <img src={time} width="40px" height="40px"></img>
-                <h1>2012</h1>
-              </section>
-
-              <p>
-                Our journey begins with a small, dedicated team aiming for
-                excellence.
-              </p>
-            </div>
-            <div className="card">
-              <section className="header">
-                <img src={time} width="40px" height="40px"></img>
-                <h1>2015</h1>
-              </section>
-              <p>
-                Expanding our horizons, we introduced modern textile innovations
-                to the market.
-              </p>
-            </div>
-            <div className="card">
-              <section className="header">
-                <img src={time} width="40px" height="40px"></img>
-                <h1>2020</h1>
-              </section>
-              <p>
-                Reaching global audiences and becoming a trusted name in
-                textiles.
-              </p>
-            </div>
+            {milestonesData.map((milestone, index) => (
+              <div className="card" key={index}>
+                <section className="header">
+                  <img
+                    src={time}
+                    alt={`Milestone ${milestone.year}`}
+                    width="40px"
+                    height="40px"
+                  />
+                  <h1>{milestone.year}</h1>
+                </section>
+                <p>{milestone.description}</p>
+              </div>
+            ))}
           </Slider>
         </section>
       </div>
