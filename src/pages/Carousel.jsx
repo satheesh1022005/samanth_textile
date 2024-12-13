@@ -10,19 +10,19 @@ const Carousel = () => {
       image: "https://picsum.photos/id/1015/800/400", // Random image from Picsum
       companyName: "Samanth Textiles",
       passage:
-        "This is a passage about Company One. It provides excellent services and products.",
+        "Samanth textiles is an innovative and impressive textile legacy which is build upon trusts,entrepreneurship zeal, quality, brand name and commitment towards a sustainable textile industry",
     },
     {
       image: "https://picsum.photos/id/1025/800/400", // Random image from Picsum
       companyName: "Samanth Textiles",
       passage:
-        "This is a passage about Company Two. Known for its innovative solutions.",
+        "Samanth textiles is an innovative and impressive textile legacy which is build upon trusts,entrepreneurship zeal, quality, brand name and commitment towards a sustainable textile industry",
     },
     {
       image: "https://picsum.photos/id/1035/800/400", // Random image from Picsum
       companyName: "Samanth Textiles",
       passage:
-        "This is a passage about Company Three. Committed to customer satisfaction.",
+        "Samanth textiles is an innovative and impressive textile legacy which is build upon trusts,entrepreneurship zeal, quality, brand name and commitment towards a sustainable textile industry",
     },
   ];
 

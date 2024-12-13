@@ -38,6 +38,8 @@
 }
 .carousel-content p {
   font-size: 1rem; /* Set a very large font size */
+  width: 50%;
+  text-align: justify;
   font-weight: bold; /* Make the text bold */
   margin: 0 0 10px; /* Bottom margin for spacing */
   color: white; /* Text color */

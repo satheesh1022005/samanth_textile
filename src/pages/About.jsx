@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import { aboutData } from "../components/Data";
 import "./About.css";
 import time from "../assets/time.png";
 import background from "../assets/image.png";
@@ -38,7 +37,7 @@ const About = () => {
       {/* Main section with content and carousel */}
       <div className="about-row">
         <section className="about-content">
-          <h1>Samanth Textile</h1>
+          <h1>Samanth Textiles</h1>
           <p>
             Established in 2012, Samanth Textile has been delivering
             high-quality textiles with an unmatched commitment to excellence.
@@ -66,16 +65,6 @@ const About = () => {
           </Slider>
         </section>
       </div>
-
-      {/* Section for rounded cards */}
-      <section className="about-items">
-        {aboutData.map((item, index) => (
-          <div className="about-card" key={index}>
-            <img src={item.logo} alt={item.name} />
-            <span>{item.name}</span>
-          </div>
-        ))}
-      </section>
     </main>
   );
 };
